@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>La meva app</title>
+</head>
+<body>
+
+  <h1>Hola món 🌍</h1>
+
+  <button onclick="carregarMissatge()">
+    Carregar missatge del servidor
+  </button>
+
+  <p id="resultat"></p>
+
+  <script>
+    async function carregarMissatge() {
+      const resposta = await fetch('/api/missatge');
+      const dades = await resposta.json();
+
+      document.getElementById('resultat').innerText =
+        dades.missatge;
+    }
+  </script>
+
+</body>
+</html>
