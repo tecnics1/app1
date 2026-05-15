@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/api/missatge', (req, res) => {
   res.json({
-    missatge: 'Hola des del backend!'
+    missatge: 'Holaaaaaa des del backend!'
   });
 });
 
